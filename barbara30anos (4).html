@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="EXCLUSIVO: Bárbara Campelo completa 30 anos" />
+  <meta property="og:description" content="Jornalista, atleta e referência humana celebra três décadas de vida" />
+  <title>EXCLUSIVO: Bárbara Campelo completa 30 anos | Portal BCS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #E8192C;
+      --dark: #0D0D0D;
+      --ink: #1a1a1a;
+      --gray: #6b6b6b;
+      --light-gray: #f0f0f0;
+      --bg: #fafaf8;
+      --gold: #b8962e;
+      --white: #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--dark);
+      color: #aaa;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 8px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar span { color: var(--red); font-weight: 600; }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      border-bottom: 4px solid var(--dark);
+      padding: 20px 24px 16px;
+      text-align: center;
+      background: var(--white);
+    }
+    .masthead-kicker {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 6px;
+    }
+    .masthead h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1;
+      color: var(--dark);
+    }
+    .masthead h1 span { color: var(--red); }
+    .masthead-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 8px;
+    }
+
+    /* ── BREAKING BANNER ── */
+    .breaking {
+      background: var(--red);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 9px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      overflow: hidden;
+    }
+    .breaking-label {
+      background: white;
+      color: var(--red);
+      padding: 2px 8px;
+      font-size: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .breaking-ticker {
+      animation: ticker 18s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid #ddd;
+      padding: 40px 0 32px;
+    }
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .hero-lead {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #333;
+      font-style: italic;
+      border-left: 3px solid var(--red);
+      padding-left: 16px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .hero-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: var(--gray);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid #e0e0e0;
+    }
+    .hero-meta strong { color: var(--ink); }
+
+    /* ── STAT STRIP ── */
+    .stat-strip {
+      background: var(--dark);
+      color: white;
+      padding: 24px 0;
+      margin: 0;
+    }
+    .stat-strip .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .stat {
+      text-align: center;
+      padding: 0 20px;
+      border-right: 1px solid #333;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    /* ── BODY SECTIONS ── */
+    .body-section { padding: 36px 0; border-bottom: 1px solid #e0e0e0; }
+    .section-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--red);
+      display: inline-block;
+      padding: 3px 8px;
+      margin-bottom: 14px;
+    }
+    .section-tag.dark { background: var(--dark); }
+    .section-tag.gold { background: var(--gold); }
+
+    .body-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+    .body-section p { margin-bottom: 14px; color: #2a2a2a; }
+    .body-section p:last-child { margin-bottom: 0; }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote {
+      border-top: 3px solid var(--dark);
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+      margin: 28px 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--dark);
+      margin: 0 0 8px;
+    }
+    .pull-quote cite {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      font-style: normal;
+    }
+
+    /* ── TIMELINE ── */
+    .timeline { list-style: none; padding: 0; margin: 20px 0; }
+    .timeline li {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px dashed #ddd;
+      align-items: start;
+    }
+    .timeline li:last-child { border-bottom: none; }
+    .tl-year {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--red);
+      padding-top: 2px;
+    }
+    .tl-text {
+      font-size: .95rem;
+      color: #2a2a2a;
+      line-height: 1.5;
+    }
+    .tl-text strong { color: var(--dark); }
+
+    /* ── DEPOIMENTO ── */
+    .depoimento {
+      background: var(--light-gray);
+      border-left: 4px solid var(--red);
+      padding: 24px 28px;
+      margin: 8px 0;
+    }
+    .depoimento p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .depoimento-author {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .depoimento-author span { color: var(--red); }
+
+    /* ── PERFIL CARD ── */
+    .perfil-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .perfil-item {
+      background: var(--white);
+      border: 1px solid #e0e0e0;
+      padding: 14px 16px;
+    }
+    .perfil-item-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 4px;
+    }
+    .perfil-item-value {
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    /* ── BADGE STRIP ── */
+    .badge-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .badge {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1.5px solid var(--dark);
+      padding: 5px 12px;
+      letter-spacing: .04em;
+    }
+    .badge.red { border-color: var(--red); color: var(--red); }
+    .badge.gold { border-color: var(--gold); color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: #888;
+      text-align: center;
+      padding: 32px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: .06em;
+    }
+    footer strong { color: var(--red); font-size: 1.1rem; font-family: 'Playfair Display', serif; }
+    footer p { margin-top: 8px; }
+
+    /* ── CONFETTI ── */
+    .confetti-bar {
+      height: 5px;
+      background: repeating-linear-gradient(90deg,
+        var(--red) 0px, var(--red) 20px,
+        var(--dark) 20px, var(--dark) 40px,
+        var(--gold) 40px, var(--gold) 60px,
+        #fff 60px, #fff 80px);
+    }
+
+    @media (max-width: 600px) {
+      .stat-strip .container { grid-template-columns: 1fr; gap: 20px; }
+      .stat { border-right: none; border-bottom: 1px solid #333; padding-bottom: 20px; }
+      .stat:last-child { border-bottom: none; }
+      .perfil-grid { grid-template-columns: 1fr; }
+      .topbar { flex-direction: column; gap: 4px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>● AO VIVO</span>
+    <span>Portal BCS — Edição Especial de Aniversário</span>
+    <span>11 de junho de 2026</span>
+  </div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-kicker">Edição Comemorativa</div>
+    <h1>Portal <span>BCS</span></h1>
+    <div class="masthead-sub">Notícias que importam · Histórias que ficam</div>
+  </div>
+
+  <!-- BREAKING BANNER -->
+  <div class="breaking">
+    <span class="breaking-label">URGENTE</span>
+    <span class="breaking-ticker">
+      🎉 BÁRBARA CAMPELO COMPLETA 30 ANOS &nbsp;·&nbsp; Jornalista, atleta e referência humana celebra três décadas de vida &nbsp;·&nbsp; Mundo comemora com ela &nbsp;·&nbsp; 🎉 BÁRBARA CAMPELO COMPLETA 30 ANOS &nbsp;·&nbsp; Jornalista, atleta e referência humana celebra três décadas de vida &nbsp;·&nbsp; Mundo comemora com ela &nbsp;·&nbsp;
+    </span>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">Especial · Perfil</div>
+      <h2>Trinta anos de uma mulher que escolheu ser extraordinária em tudo que faz</h2>
+      <div class="hero-lead">
+        Jornalista de formação, atleta campeã, trabalhadora incansável e presença que transforma quem tem a sorte de cruzar seu caminho — Bárbara Campelo de Souza Afonso chega aos 30 com uma trajetória que pede manchete.
+      </div>
+      <div class="hero-meta">
+        <span>Por <strong>Redação Portal BCS</strong></span>
+        <span>📍 Rio de Janeiro, RJ</span>
+        <span>🕐 Publicado hoje, 11 jun. 2026</span>
+        <span>🎂 Edição especial de aniversário</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STAT STRIP -->
+  <div class="stat-strip">
+    <div class="container">
+      <div class="stat">
+        <div class="stat-num">30</div>
+        <div class="stat-label">Anos de história</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2×</div>
+        <div class="stat-label">Campeã estadual e nacional</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Vidas que impactou</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: QUEM É -->
+  <div class="body-section">
+    <div class="container">
+      <span class="section-tag">Perfil</span>
+      <h3>Quem é Bárbara Campelo?</h3>
+      <p>
+        Pergunte a qualquer pessoa que convive com Bárbara e a resposta virá antes mesmo da pergunta terminar: <em>"ela é a pessoa mais prestativa que já conheci."</em> Não é exagero — é um padrão. Formada em Jornalismo, com uma pós-graduação concluída e outra em andamento, Bárbara construiu ao longo de três décadas um perfil raro: é intelectualmente curiosa, atleticamente disciplinada e humanamente generosa.
+      </p>
+      <p>
+        Hoje ela atua como assistente administrativa no Hospital de Ipanema, no Rio de Janeiro, onde leva para o ambiente de saúde a mesma dedicação que marcou sua trajetória esportiva e acadêmica. Para quem a conhece, não há surpresa: onde Bárbara está, as coisas funcionam melhor.
+      </p>
+      <p>
+        Mas Bárbara não é só esforço e conquista — ela é também leveza. Uma das suas marcas mais contagiantes é a paixão por viver: adora dançar, se divertir, e a música é a trilha sonora permanente da sua vida. Seu gosto musical é eclético e honesto — pop no coração, mas pagode e MPB na alma. É fã declarada de Katy Perry (a ponto de batizar sua cachorrinha em homenagem à cantora), mas também se emociona com Djavan e solta a voz com Ivete Sangalo. Quem já esteve numa festa com Bárbara sabe: ela está na pista.
+      </p>
+      <p>
+        E se tem algo que revela seu lado mais afetuoso, são os animais. Bárbara é mãe de dois pets: <strong>Perry</strong>, uma cachorrinha já idosa que carrega no nome a homenagem à cantora favorita da dona, e <strong>Safira</strong>, uma gata. Os dois são muito amados — e muito mimados.
+      </p>
+
+      <div class="pull-quote">
+        <p>"Ela não apenas ocupa os espaços — ela os melhora."</p>
+        <cite>— Observação geral de quem tem a sorte de conhecê-la</cite>
+      </div>
+
+      <div class="perfil-grid">
+        <div class="perfil-item">
+          <div class="perfil-item-label">Formação</div>
+          <div class="perfil-item-value">Jornalismo + Pós-graduação</div>
+        </div>
+        <div class="perfil-item">
+          <div class="perfil-item-label">Atuação</div>
+          <div class="perfil-item-value">Hospital de Ipanema, RJ</div>
+        </div>
+        <div class="perfil-item">
+          <div class="perfil-item-label">Esporte</div>
+          <div class="perfil-item-value">Basquete — campeã estadual e nacional</div>
+        </div>
+        <div class="perfil-item">
+          <div class="perfil-item-label">Representação internacional</div>
+          <div class="perfil-item-value">Sul-Americano — Peru 🇵🇪</div>
+        </div>
+        <div class="perfil-item">
+          <div class="perfil-item-label">Música</div>
+          <div class="perfil-item-value">Pop, Pagode, MPB, Katy Perry, Djavan, Ivete</div>
+        </div>
+        <div class="perfil-item">
+          <div class="perfil-item-label">Pets</div>
+          <div class="perfil-item-value">🐶 Perry · 🐱 Safira</div>
+        </div>
+      </div>
+
+      <div class="badge-strip">
+        <span class="badge red">🔴 Flamengo</span>
+        <span class="badge gold">🎤 Katy Perry</span>
+        <span class="badge gold">🎶 Djavan</span>
+        <span class="badge gold">🎵 Ivete Sangalo</span>
+        <span class="badge">💃 Dança</span>
+        <span class="badge">🎧 Pop · Pagode · MPB</span>
+        <span class="badge">🐶 Perry</span>
+        <span class="badge">🐱 Safira</span>
+        <span class="badge">📚 Pesquisadora</span>
+        <span class="badge">🏀 Atleta</span>
+        <span class="badge">🏥 Saúde pública</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: TIMELINE -->
+  <div class="body-section">
+    <div class="container">
+      <span class="section-tag dark">Linha do Tempo</span>
+      <h3>Os 30 anos em marcos que definem uma trajetória</h3>
+      <p>Da quadra de basquete às salas de aula, passando pelos corredores de um hospital — a cronologia de Bárbara é a de alguém que nunca parou de avançar.</p>
+
+      <ul class="timeline">
+        <li>
+          <span class="tl-year">1996</span>
+          <span class="tl-text"><strong>Nasce Bárbara Campelo</strong> — e o mundo fica um pouco melhor.</span>
+        </li>
+        <li>
+          <span class="tl-year">Adol.</span>
+          <span class="tl-text"><strong>Descobre o basquete</strong> — e a quadra descobre uma atleta que nasceu para competir.</span>
+        </li>
+        <li>
+          <span class="tl-year">Adol.</span>
+          <span class="tl-text"><strong>Campeã estadual de basquete</strong> — primeiro grande título de uma atleta que estava apenas começando.</span>
+        </li>
+        <li>
+          <span class="tl-year">Adol.</span>
+          <span class="tl-text"><strong>Campeã nacional de basquete</strong> — confirmando que o estadual não foi sorte, foi caráter.</span>
+        </li>
+        <li>
+          <span class="tl-year">Peru</span>
+          <span class="tl-text"><strong>Sul-Americano de Basquete 🇵🇪</strong> — Bárbara viaja ao Peru para representar o Brasil. A equipe conquista o vice-campeonato sul-americano. Uma medalha de prata que brilha como ouro.</span>
+        </li>
+        <li>
+          <span class="tl-year">Univ.</span>
+          <span class="tl-text"><strong>Graduação em Jornalismo</strong> — mais uma prova de que a atleta sempre carregou dentro de si a jornalista curiosa e apurada.</span>
+        </li>
+        <li>
+          <span class="tl-year">Pós</span>
+          <span class="tl-text"><strong>Primeira pós-graduação concluída</strong> — porque Bárbara não para. Nunca parou.</span>
+        </li>
+        <li>
+          <span class="tl-year">2025</span>
+          <span class="tl-text"><strong>Show da Katy Perry em Brasília 🎤</strong> — um sonho realizado. A fã de longa data finalmente vê ao vivo a artista que sempre amou.</span>
+        </li>
+        <li>
+          <span class="tl-year">Hoje</span>
+          <span class="tl-text"><strong>30 anos, segunda pós em andamento</strong>, Hospital de Ipanema, e uma vida construída com propósito, garra e muita generosidade.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 3: DEPOIMENTO -->
+  <div class="body-section">
+    <div class="container">
+      <span class="section-tag gold">Depoimento exclusivo</span>
+      <h3>"Eu tenho sorte demais de ter você na minha vida"</h3>
+      <p>Em nota exclusiva ao Portal BCS, o namorado de Bárbara — que a acompanha nessa data especial — dividiu o que sente por ela em suas próprias palavras:</p>
+
+      <div class="depoimento">
+        <p>
+          Bárbara, você é uma das pessoas mais importantes que já entrou na minha vida. Nesses quase oito meses juntos, eu aprendi o que significa ter alguém que, só de existir do seu lado, faz você querer ser melhor — não por obrigação, mas porque você inspira isso naturalmente.
+        </p>
+        <p>
+          Você é prestativa com todo mundo, sempre disposta a ajudar, sempre presente. E ao mesmo tempo carrega uma força que eu admiro muito: a de uma atleta que foi campeã, que viajou pro Peru representando o Brasil, que nunca desistiu dos estudos mesmo depois de tudo que já conquistou. Você é movida por algo que poucas pessoas têm.
+        </p>
+        <p>
+          Eu te amo muito. E tenho sorte — sorte de verdade — de estar aqui, do seu lado, comemorando os seus 30 anos. Que venham mais trinta cheios de coisas incríveis, e que eu possa continuar sendo parte da sua história.
+        </p>
+        <p>
+          Feliz aniversário, meu bem. 🎂❤️
+        </p>
+        <div class="depoimento-author">Seu namorado <span>· com todo o amor do mundo</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFETTI BAR -->
+  <div class="confetti-bar"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>Portal BCS</strong>
+    <p>Edição Especial · 11 de junho de 2026 · Rio de Janeiro, RJ</p>
+    <p style="margin-top:16px; font-size:13px; color:#bbb; font-family:'Source Serif 4', serif; font-style:italic;">
+      "Algumas pessoas chegam na sua vida e fazem tudo fazer mais sentido."
+    </p>
+    <p style="margin-top:20px;">🎂 Feliz 30 anos, Bárbara! 🎂</p>
+  </footer>
+
+</body>
+</html>
